@@ -1,0 +1,103 @@
+/**********************************
+ *                                *
+ *   CSS for login/signup page    *
+ *                                *
+ **********************************/
+
+
+/* ---------- FONTS ----------*/
+@font-face {
+  font-family: babapro;
+  src: url(BabaPro-Bold.ttf);
+}
+
+/* -------- HTML Elements -------*/
+a {color: #0FFFFE;}
+
+h1 {margin-bottom: 5px;}
+
+h2 {
+    margin: 0px 0px 5px 0px;
+    color: #0FFFFE; 
+    text-align: center;
+    font-size: 30px;
+}
+
+label{  
+    color: #0FFFFE;  
+    font-size: 17px;  
+}
+
+body {   
+    font-family: 'Arial';  
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url('../images/lock_cropped2.jpg');
+} 
+
+/* ---------- IDs ----------*/
+#forgot {
+    float: right;
+    color: #0FFFFE; 
+    font-size: 12px;
+    padding-right: 10px;
+}
+
+#privnotes {
+    width: 480px;  
+    margin-left: 210px;
+    text-align: center;
+    color: #0FFFFE; 
+    font-family: babapro; 
+    font-size: 23px;
+    margin-top: 50px;
+}
+
+/* -------- Classes ----------*/
+.login {  
+    width: 320px;  
+    margin-left: 210px;
+    border-radius: 15px;  
+    background: rgba(0, 0, 0, .40); 
+    padding: 40px 80px 65px 80px;  
+} 
+
+.switchForms{  
+    overflow: hidden;  
+    margin-left: 210px;
+    width: 400px;  
+    text-align: center;
+    font-size: 19px;
+    padding: 40px 40px 40px 40px;  
+    background: rgba(0, 0, 0, .40); 
+    border-radius: 15px; 
+    color: #FFF; 
+}  
+  
+.acctInfo { 
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+
+}  
+.submitinfo{  
+    color: #000;
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    font-size: 15px;
+    padding-left: 7px;  
+    border-radius: 17px;  
+    border: 2px solid black;
+    background-color: #FFF;
+    border-color: #0FFFFE;
+    align-content: center;
+    font-weight: bold;
+} 
+
+.signup {
+    display: none;
+}
