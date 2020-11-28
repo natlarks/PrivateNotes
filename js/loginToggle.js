@@ -17,3 +17,18 @@ function toLogin() {
   signup[0].style.display = "none";
   signup[1].style.display = "none";
 }
+
+function addNote() {
+  var note = document.getElementById('addnoteform');
+  note.style.display = "block";
+}
+
+function editNote(id, title, category, content) {
+  alert(title);
+  var note = document.getElementById('editNoteForm');
+  document.getElementById('catsEdit').value=category;
+  document.getElementById('editTitle').value=title;
+  document.getElementById('editnotecontent').value=content;
+  document.getElementById('noteIDEdit').value=id;
+  note.style.display = "block";
+}

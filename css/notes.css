@@ -12,7 +12,13 @@
 }
 
 /* -------- HTML Elements -------*/
-a {color: #0FFFFE;}
+a:link {
+    color: #FFF;
+}
+
+a:hover {
+    color: #BBB;
+}
 
 h1 {margin-bottom: 5px;}
 
@@ -58,6 +64,14 @@ body {
     padding-right: 5vh;
 }
 
+.forms {
+    display: none;
+    position: fixed;
+    margin-left: 20vw;
+    margin-top: 15vh;
+    
+}
+
 #addnote {
     float: left;
     background-color: #CED5FF;
@@ -75,7 +89,7 @@ body {
     box-sizing: border-box;
 }
 
-#notecontent {
+.formContent {
     width: 310px;  
     height: 90px;  
     border: none;  
@@ -86,7 +100,7 @@ body {
     font-size: 15px;
 }
 
-#cats {
+#cats, #catsEdit {
     width: 310px; 
     height: 30px;  
     border: none;  
@@ -140,11 +154,12 @@ body {
 
 .login {  
     width: 320px;  
-    margin-left: 210px;
     border-radius: 15px;  
-    background: rgba(0, 0, 0, .40); 
+    background-color: #001C3A; 
     padding: 40px 80px 65px 80px;  
     color: #2476E2;
+    border: 10px solid black;
+    border-color: #CED5FF;
 } 
 .acctInfo { 
     width: 300px;  
