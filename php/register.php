@@ -19,7 +19,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 // Makes sure email is not already registered
 $sql = "SELECT * FROM accounts WHERE email = ?";
 $stmt = mysqli_prepare($conn, $sql);
-$stmt->bind_param("s", $_POST['email']);
+$stmt->bind_param("s", $email);
 $stmt->execute();
 $stmt->store_result();
 if ($stmt->num_rows() > 0) {
