@@ -59,6 +59,8 @@ body {
 }
 
 
+
+
 /* -------- Classes ----------*/
 .note {
     float: left;
@@ -67,4 +69,37 @@ body {
     height: 40vh;
     margin-left: 30px;
     margin-bottom: 20px;
+    border-radius: 15px;
 }
+.title {
+    padding: 11px;
+    font-weight: bold;
+    font-size: 19px;
+    background: rgba(0, 0, 0, .40);
+    border-radius: 15px 15px 0px 0px; 
+    color: white;
+}
+
+.category {
+    padding: 5px 11px 5px 11px;
+    font-size: 16px;
+    background: rgba(0, 0, 0, .20);
+    color: white;
+}
+
+.content {
+    padding: 5px 11px 11px 11px;
+    color: white;
+}
+
+.deleteNote {
+    float: right;
+    padding-bottom: 2px;
+}
+
+.editNote {
+    float: right;
+    padding-right: 6px;
+}
+
+
