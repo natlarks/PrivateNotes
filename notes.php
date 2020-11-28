@@ -20,6 +20,7 @@
                 <label><b>Category</b></label> 
                 <br>   
                 <select name="cats" id="cats">
+                  <option value="No label">No label</option>
                   <option value="Grocery">Grocery</option>
                   <option value="Important Information">Important Information</option>
                   <option value="Account Password">Account Password</option>
@@ -32,9 +33,9 @@
                 <br><br>
 
                 <label><b>Note</b></label>    
-                <textarea type="test" name="notecontent"  id="notecontent" placeholder="Walk the dog"> </textarea>
+                <textarea type="test" name="notecontent"  id="notecontent" placeholder="Walk the dog"></textarea>
                 <br><br>
-
+                <input type="hidden" value=1 name="account_id" />
                 <input type="submit" name="notesubmit" id="notesubmit" class="submitinfo" value="Add Note">
             </form>
         </div>
@@ -68,7 +69,6 @@
                         <div class='category'>".$category."</div>
                         <div class='content'>".$content."</div>
                     </div>";
-                    // printf("%s\n%s %s\n", $title, $content, $category); 
                 }
             }
         ?>
