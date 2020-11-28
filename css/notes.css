@@ -1,0 +1,70 @@
+/**********************************
+ *                                *
+ *       CSS for notes page       *
+ *                                *
+ **********************************/
+
+
+/* ---------- FONTS ----------*/
+@font-face {
+  font-family: babapro;
+  src: url(BabaPro-Bold.ttf);
+}
+
+/* -------- HTML Elements -------*/
+a {color: #0FFFFE;}
+
+h1 {margin-bottom: 5px;}
+
+h2 {
+    margin: 0px 0px 5px 0px;
+    color: #0FFFFE; 
+    text-align: center;
+    font-size: 30px;
+}
+
+label{  
+    color: #0FFFFE;  
+    font-size: 17px;  
+}
+
+body {   
+    font-family: 'Arial';  
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url('../images/notes.jpg');
+    background-size: 100%;
+} 
+
+/* ---------- IDs ----------*/
+#content {
+    width: 65vw;
+    height: 100%;
+    margin-left: 17.5vw;
+    margin-right: 17.5vw;
+    background-color: #001C3A;
+}
+
+#privnotes {
+    text-align: center;
+    color: #2476E2; 
+    font-family: babapro; 
+    font-size: 23px;
+    padding-top: 10px;
+}
+
+#allnotes {
+    padding-left: 5vh;
+    padding-right: 5vh;
+}
+
+
+/* -------- Classes ----------*/
+.note {
+    float: left;
+    background-color: #2476E2;
+    width: 13vw;
+    height: 40vh;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
