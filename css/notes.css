@@ -17,14 +17,13 @@ a {color: #0FFFFE;}
 h1 {margin-bottom: 5px;}
 
 h2 {
-    margin: 0px 0px 5px 0px;
-    color: #0FFFFE; 
+    margin: 0px 0px 5px 0px; 
     text-align: center;
     font-size: 30px;
 }
 
 label{  
-    color: #0FFFFE;  
+    color: #2476E2;;  
     font-size: 17px;  
 }
 
@@ -39,6 +38,7 @@ body {
 /* ---------- IDs ----------*/
 #content {
     width: 65vw;
+    position: absolute;
     height: 100%;
     margin-left: 17.5vw;
     margin-right: 17.5vw;
@@ -58,7 +58,42 @@ body {
     padding-right: 5vh;
 }
 
+#addnote {
+    float: left;
+    background-color: #CED5FF;
+    width: 13vw;
+    height: 40vh;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    text-align: center;
+    color: #164788;
+    position: relative;
+    padding-top: 95px; 
+    border: 10px solid black;
+    border-color: #164788;
+    box-sizing: border-box;
+}
 
+#notecontent {
+    width: 310px;  
+    height: 90px;  
+    border: none;  
+    border-radius: 3px;  
+    color: #000;
+    text-align: left;
+    font-size: 15px;
+}
+
+#cats {
+    width: 310px; 
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+    color: #000;
+    font-weight: bold;
+}
 
 
 /* -------- Classes ----------*/
@@ -77,19 +112,19 @@ body {
     font-size: 19px;
     background: rgba(0, 0, 0, .40);
     border-radius: 15px 15px 0px 0px; 
-    color: white;
+    color: #FFF;
 }
 
 .category {
     padding: 5px 11px 5px 11px;
     font-size: 16px;
     background: rgba(0, 0, 0, .20);
-    color: white;
+    color: #FFF;
 }
 
 .content {
     padding: 5px 11px 11px 11px;
-    color: white;
+    color: #FFF;
 }
 
 .deleteNote {
@@ -102,4 +137,34 @@ body {
     padding-right: 6px;
 }
 
-
+.login {  
+    width: 320px;  
+    margin-left: 210px;
+    border-radius: 15px;  
+    background: rgba(0, 0, 0, .40); 
+    padding: 40px 80px 65px 80px;  
+    color: #2476E2;
+} 
+.acctInfo { 
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+    color: #000;
+    font-size: 15px;
+} 
+.submitinfo{  
+    color: #000;
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    font-size: 15px;
+    padding-left: 7px;  
+    border-radius: 17px;  
+    border: 2px solid black;
+    background-color: #FFF;
+    border-color: #2476E2;
+    align-content: center;
+    font-weight: bold;
+} 

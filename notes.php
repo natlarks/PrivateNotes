@@ -13,7 +13,37 @@
         <div id="privnotes">
             <h1>Private Notes</h1><br>
         </div>
+        <div id="addnoteform">
+            <form class="login" method="post" action="php/addNote.php">
+                <h2>Add Note</h2><br>
+
+                <label><b>Category</b></label> 
+                <br>   
+                <select name="cats" id="cats">
+                  <option value="Grocery">Grocery</option>
+                  <option value="Important Information">Important Information</option>
+                  <option value="Account Password">Account Password</option>
+                  <option value="Todo List">Todo List</option>
+                </select>   
+                <br><br>    
+
+                <label><b>Title</b></label>    
+                <input type="text" name="addTitle" class="acctInfo" id="addTitle" placeholder="Title"> 
+                <br><br>
+
+                <label><b>Note</b></label>    
+                <textarea type="test" name="notecontent"  id="notecontent" placeholder="Walk the dog"> </textarea>
+                <br><br>
+
+                <input type="submit" name="notesubmit" id="notesubmit" class="submitinfo" value="Add Note">
+            </form>
+        </div>
         <div id="allnotes">
+        <div id="addnote">
+            <i class="fa fa-plus fa-5x"></i>
+            <h2>Add Note</h2>
+
+        </div>
         <?php
             $account_id = 1;
             include('php/dbConfig.php');
