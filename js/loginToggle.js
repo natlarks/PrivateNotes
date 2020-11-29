@@ -24,7 +24,6 @@ function addNote() {
 }
 
 function editNote(id, title, category, content) {
-  alert(title);
   var note = document.getElementById('editNoteForm');
   document.getElementById('catsEdit').value=category;
   document.getElementById('editTitle').value=title;
