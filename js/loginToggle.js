@@ -31,3 +31,10 @@ function editNote(id, title, category, content) {
   document.getElementById('noteIDEdit').value=id;
   note.style.display = "block";
 }
+
+function deleteNote(id, title) {
+  var note = document.getElementById('deleteNoteForm');
+  deleteNoteTitle.innerText=title;
+  document.getElementById('noteIDDelete').value=id;
+  note.style.display = "block";
+}

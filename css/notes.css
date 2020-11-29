@@ -42,6 +42,11 @@ body {
 } 
 
 /* ---------- IDs ----------*/
+#delMsg {
+    color: #CED5FF;
+    text-align: center;
+}
+
 #content {
     width: 65vw;
     position: absolute;
@@ -108,6 +113,10 @@ body {
     padding-left: 8px;  
     color: #000;
     font-weight: bold;
+}
+
+h3 {
+    display: inline-block;
 }
 
 

@@ -16,9 +16,9 @@ if (!in_array($_POST['cats'], $cats))  {
 	exit;
 }
 
-$category = filter_var($_POST['cats'], FILTER_SANITIZE_STRING);
 $title = filter_var($_POST['addTitle'], FILTER_SANITIZE_STRING);
 $content = filter_var($_POST['notecontent'], FILTER_SANITIZE_STRING);
+$category = filter_var($_POST['cats'], FILTER_SANITIZE_STRING);
 
 if ($title === "") {
 	echo '<script>alert("Title can not be blank. Please try again.");

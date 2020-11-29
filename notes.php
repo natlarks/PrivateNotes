@@ -68,6 +68,19 @@
                 <input type="submit" name="editNote" id="editNote" class="submitinfo" value="Edit Note">
             </form>
         </div>
+        <div class="forms" id="deleteNoteForm">
+            <form class="login" method="post" action="php/deleteNote.php">
+                <div id="delMsg">
+                <h2>Delete Note</h2>
+                
+                    <h3>Delete note '</h3><h3 id=deleteNoteTitle></h3><h3>'?</h3>
+                </div>
+                
+                <input type="hidden" value=1 name="account_id" />
+                <input type="hidden" value=1 name="note_id" id="noteIDDelete" />
+                <input type="submit" name="deleteNote" id="deleteNote" class="submitinfo" value="Delete">
+            </form>
+        </div>
         <div id="allnotes">
             <a href="javascript:addNote()">
                 <div id="addnote">
@@ -91,10 +104,11 @@
                         <input type='hidden' value=".$note_id." name='note_id' />
 
                         <div class='title'>".$title."
-                            
-                            <span class='deleteNote'>
-                                <i class='fa fa-times'></i>
-                            </span>
+                                <span class='deleteNote'>
+                                <a href='javascript:deleteNote(".$note_id.", \"".$title."\")'>
+                                    <i class='fa fa-times'></i>
+                                </a>
+                                </span>
 
                                 <span class='editNote'>
                                 <a href='javascript:editNote(".$note_id.", \"".$title."\", \"".$category."\", \"".$content."\")'>
