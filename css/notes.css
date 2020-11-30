@@ -12,13 +12,9 @@
 }
 
 /* -------- HTML Elements -------*/
-a:link {
-    color: #FFF;
-}
+a:link {color: #FFF;}
 
-a:hover {
-    color: #BBB;
-}
+a:hover {color: #BBB;}
 
 h1 {margin-bottom: 5px;}
 
@@ -27,6 +23,9 @@ h2 {
     text-align: center;
     font-size: 30px;
 }
+
+h3 {display: inline-block;}
+
 
 label{  
     color: #2476E2;;  
@@ -94,6 +93,25 @@ body {
     box-sizing: border-box;
 }
 
+#sortNoteBtn a:link {
+    color: #164788;
+}
+
+
+#sortNoteBtn {
+    padding-bottom: 53px;
+    background-color: #CED5FF;
+    width: 7vw;
+    height: 2vh;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    border: 2px solid black;
+    border-color: #164788;
+    box-sizing: border-box;
+    margin-left: 28.3vw;
+}
+
 .formContent {
     width: 310px;  
     height: 90px;  
@@ -115,8 +133,25 @@ body {
     font-weight: bold;
 }
 
-h3 {
-    display: inline-block;
+
+#sort {
+    float: right;
+    padding-right: 90px;
+}
+#catsSort, #catsSortCat {
+    height: 30px;
+    width: 180px;
+    border-radius: 15px;  
+    background-color: #EEE; 
+    padding-left: 6px;
+}
+
+#catDropdown {
+    display: none;
+}
+
+#sortLabel {
+    font-size: 20px;
 }
 
 
@@ -193,3 +228,9 @@ h3 {
     align-content: center;
     font-weight: bold;
 } 
+
+.closeForm {
+    float: right;
+    padding-top: 20px;
+    padding-right: 22px;
+}

@@ -10,13 +10,30 @@
 
 </head>    
 <body>
-
+    <?php
+        $sort = 0;
+    ?>
     <div id="content">
         <div id="privnotes">
             <h1>Private Notes</h1><br>
         </div>
+
+        
+        <div id="sortNoteBtn">
+            <a href="javascript:sortNotes()">
+                <h3>Sort Notes</h3>
+            </a>
+        </div>
+        <br>
+        
         <div class="forms" id="addnoteform">
+            <span class='closeForm'>
+                <a href="javascript:hideForm('addnoteform')">
+                    <i class="fa fa-times-circle fa-2x"></i>
+                </a>
+            </span>
             <form class="login" method="post" action="php/addNote.php">
+                
                 <h2>Add Note</h2><br>
 
                 <label><b>Category</b></label> 
@@ -42,6 +59,11 @@
             </form>
         </div>
         <div class="forms" id="editNoteForm">
+            <span class='closeForm'>
+                <a href="javascript:hideForm('editNoteForm')">
+                    <i class="fa fa-times-circle fa-2x"></i>
+                </a>
+            </span>
             <form class="login" method="post" action="php/editNote.php">
                 <h2>Edit Note</h2><br>
 
@@ -69,6 +91,11 @@
             </form>
         </div>
         <div class="forms" id="deleteNoteForm">
+            <span class='closeForm'>
+                <a href="javascript:hideForm('deleteNoteForm')">
+                    <i class="fa fa-times-circle fa-2x"></i>
+                </a>
+            </span>
             <form class="login" method="post" action="php/deleteNote.php">
                 <div id="delMsg">
                 <h2>Delete Note</h2>
@@ -81,6 +108,36 @@
                 <input type="submit" name="deleteNote" id="deleteNote" class="submitinfo" value="Delete">
             </form>
         </div>
+        <div class="forms" id="sortNoteForm">
+            <span class='closeForm'>
+                <a href="javascript:hideForm('sortNoteForm')">
+                    <i class="fa fa-times-circle fa-2x"></i>
+                </a>
+            </span>
+            <form class="login" method="post" action="">
+            
+                <h2>Sort Notes</h2>
+                
+                <label><b>Order by:  </b></label> 
+               
+                <select name="catsSort" id="catsSort" >
+                  <option value="Choose option" selected>Choose option</option>
+                  <option value="Date created">Date created</option>
+                  <option value="Alphabetically">Alphabetically</option>
+                  <option value="Category">Category</option>
+                </select> 
+                <br>
+                <br>
+
+                <input type="hidden" value=1 name="account_id" />
+                <input type="hidden" value=1 name="note_id" id="noteIDSort" />
+                <input type="submit" name="sortNote" id="sortNote" class="submitinfo" value="Sort">
+                <?php
+                    $sort = 1;
+                ?>
+            </form>
+        </div>
+        
         <div id="allnotes">
             <a href="javascript:addNote()">
                 <div id="addnote">
@@ -90,39 +147,9 @@
                 </div>
             </a>
             <?php
-            $account_id = 1;
-            include('php/dbConfig.php');
-            $sql = "SELECT note_id, title, content, category FROM notes WHERE account_id = ?";
-            $stmt = mysqli_prepare($conn, $sql);
-            $stmt->bind_param("i", $account_id);
-            $stmt->execute();
-            $stmt->store_result();
-            $stmt->bind_result($note_id, $title, $content, $category); 
-            if ($stmt->num_rows() > 0) {
-                while ($stmt->fetch()) {
-                    echo "<div class='note'>
-                        <input type='hidden' value=".$note_id." name='note_id' />
-
-                        <div class='title'>".$title."
-                                <span class='deleteNote'>
-                                <a href='javascript:deleteNote(".$note_id.", \"".$title."\")'>
-                                    <i class='fa fa-times'></i>
-                                </a>
-                                </span>
-
-                                <span class='editNote'>
-                                <a href='javascript:editNote(".$note_id.", \"".$title."\", \"".$category."\", \"".$content."\")'>
-                                    <i class='fa fa-edit'></i>
-                            </a>
-
-                                </span>
-                            
-                        </div>
-                        <div class='category'>".$category."</div>
-                        <div class='content'>".$content."</div>
-                    </div>";
-                }
-            }
+            
+                    include('php/viewNotes.php');
+                
             ?>
         </div>
     </div>
