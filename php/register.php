@@ -38,11 +38,15 @@ if (strcmp($password, $confirmPassword) !== 0) {
 	exit;
 }
 
+$secQuestion = filter_var($_POST['secQuestion'], FILTER_SANITIZE_STRING);
+$secAnswer = filter_var($_POST['secAnswer'], FILTER_SANITIZE_STRING);
+
 // Insert new account into database with password hash.
 $password = password_hash($password, PASSWORD_DEFAULT);
-$sql = "INSERT INTO accounts (email, password) VALUES (?,?)";
+$sql = "INSERT INTO accounts (email, password, sec_question, sec_answer) VALUES (?,?,?,?)";
 $stmt = mysqli_prepare($conn, $sql);
-$stmt->bind_param("ss", $email, $password);
+$stmt->bind_param("ssss", $email, $password, $secQuestion, $secAnswer);
 $stmt->execute();
 $stmt->close();
+echo '<script>window.location.href="../index.php"</script>';
 ?>

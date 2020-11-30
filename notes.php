@@ -10,9 +10,6 @@
 
 </head>    
 <body>
-    <?php
-        $sort = 0;
-    ?>
     <div id="content">
         <div id="privnotes">
             <h1>Private Notes</h1><br>
@@ -39,7 +36,7 @@
                 <label><b>Category</b></label> 
                 <br>   
                 <select name="cats" id="cats">
-                  <option value="No label">No label</option>
+                  <option value="No label" selected>No label</option>
                   <option value="Grocery">Grocery</option>
                   <option value="Important Information">Important Information</option>
                   <option value="Account Password">Account Password</option>
@@ -70,7 +67,7 @@
                 <label><b>Category</b></label> 
                 <br>   
                 <select name="cats" id="catsEdit">
-                  <option value="No label">No label</option>
+                  <option value="No label" selected>No label</option>
                   <option value="Grocery">Grocery</option>
                   <option value="Important Information">Important Information</option>
                   <option value="Account Password">Account Password</option>
@@ -132,9 +129,7 @@
                 <input type="hidden" value=1 name="account_id" />
                 <input type="hidden" value=1 name="note_id" id="noteIDSort" />
                 <input type="submit" name="sortNote" id="sortNote" class="submitinfo" value="Sort">
-                <?php
-                    $sort = 1;
-                ?>
+                
             </form>
         </div>
         
@@ -148,7 +143,7 @@
             </a>
             <?php
             
-                    include('php/viewNotes.php');
+                include('php/viewNotes.php');
                 
             ?>
         </div>

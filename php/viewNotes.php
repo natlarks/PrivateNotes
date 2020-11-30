@@ -3,12 +3,14 @@
 include('dbConfig.php');
 
 $sql = "SELECT note_id, title, content, category FROM notes WHERE account_id=? ORDER BY date_created";
-if ($_POST["catsSort"] == "Alphabetically") {
-    $sql = "SELECT note_id, title, content, category FROM notes WHERE account_id=? ORDER BY title";
-}
+if($_POST) {
+    if ($_POST["catsSort"] == "Alphabetically") {
+        $sql = "SELECT note_id, title, content, category FROM notes WHERE account_id=? ORDER BY title";
+    }
 
-else if ($_POST["catsSort"] == "Category") {
-    $sql = "SELECT note_id, title, content, category FROM notes WHERE account_id=? ORDER BY category";
+    else if ($_POST["catsSort"] == "Category") {
+        $sql = "SELECT note_id, title, content, category FROM notes WHERE account_id=? ORDER BY category";
+    }
 }
 
 $account_id = 1;
