@@ -24,7 +24,7 @@ $stmt->execute();
 $stmt->store_result();
 $stmt->bind_result($passHash); 
 if ($stmt->num_rows() == 0) {
-	echo '<script>alert("Email address is not registered. Please sign up for an account.");
+	echo '<script>alert("Email address or password is incorrect. Please sign up for an account.");
 	window.location.href="../index.php"</script>';
 	exit;
 }
@@ -34,7 +34,7 @@ elseif ($stmt->num_rows() == 1) {
 // Sanitizes password and makes sure the password and password confirmation match
 $password = filter_var($_POST['password'], FILTER_SANITIZE_ENCODED);
 if (!password_verify($password, $passHash)) {
-	echo '<script>alert("Incorrect password. Please try again.");
+	echo '<script>alert("Email address or password is incorrect.");
 	window.location.href="../index.php"</script>';
 	exit;
 } 

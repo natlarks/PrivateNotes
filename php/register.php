@@ -23,7 +23,7 @@ $stmt->bind_param("s", $email);
 $stmt->execute();
 $stmt->store_result();
 if ($stmt->num_rows() > 0) {
-	echo '<script>alert("Email address is already registered. Please log in. ");
+	echo '<script>alert("Email address is already registered. Please log in.");
 	window.location.href="../index.php"</script>';
 	exit;
 }
@@ -48,5 +48,5 @@ $stmt = mysqli_prepare($conn, $sql);
 $stmt->bind_param("ssss", $email, $password, $secQuestion, $secAnswer);
 $stmt->execute();
 $stmt->close();
-echo '<script>window.location.href="../index.php"</script>';
+echo '<script>alert("Account created successfully.");window.location.href="../index.php"</script>';
 ?>
