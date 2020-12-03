@@ -13,4 +13,6 @@ $stmt = mysqli_prepare($conn, $sql);
 $stmt->bind_param("s", $_POST['note_id']);
 $stmt->execute();
 $stmt->close();
+header("Location: ../notes.php?email=".$_GET['email']);
+
 ?>

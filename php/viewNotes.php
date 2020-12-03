@@ -2,21 +2,21 @@
 
 include('dbConfig.php');
 
-$sql = "SELECT note_id, title, content, category FROM notes WHERE account_id=? ORDER BY date_created";
+$email=$_GET['email'];
+
+$sql = "SELECT note_id, title, content, category FROM notes WHERE email=? ORDER BY date_created";
 if($_POST) {
     if ($_POST["catsSort"] == "Alphabetically") {
-        $sql = "SELECT note_id, title, content, category FROM notes WHERE account_id=? ORDER BY title";
+        $sql = "SELECT note_id, title, content, category FROM notes WHERE email=? ORDER BY title";
     }
 
     else if ($_POST["catsSort"] == "Category") {
-        $sql = "SELECT note_id, title, content, category FROM notes WHERE account_id=? ORDER BY category";
+        $sql = "SELECT note_id, title, content, category FROM notes WHERE email=? ORDER BY category";
     }
 }
 
-$account_id = 1;
-
 $stmt = mysqli_prepare($conn, $sql);
-$stmt->bind_param("i", $account_id);
+$stmt->bind_param("s", $email);
 $stmt->execute();
 $stmt->store_result();
 $stmt->bind_result($note_id, $title, $content, $category); 

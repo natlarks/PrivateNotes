@@ -40,5 +40,5 @@ if (!password_verify($password, $passHash)) {
 } 
 $stmt->close();
 
-echo '<script>window.location.href="../notes.php"</script>';
+echo '<script>window.location.href="../notes.php?email='.$email.'"</script>';
 ?>

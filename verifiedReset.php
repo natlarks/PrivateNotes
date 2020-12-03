@@ -40,7 +40,6 @@ include('php/dbConfig.php');
 
 if ($_POST) {
     // Sanitizes password and makes sure the password and password confirmation match
-    print_r("1\n");
     $password = filter_var($_POST['password'], FILTER_SANITIZE_ENCODED);
     $confirmPassword = filter_var($_POST['confirmPassword'], FILTER_SANITIZE_ENCODED);
     if (strcmp($password, $confirmPassword) !== 0) {

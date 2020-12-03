@@ -66,26 +66,7 @@
 
                 <input type="submit" name="reset" id="reset" class="submitinfo" value="Reset">
             </form>     
-        </div>    
-        <div id="resetConfirmed"> 
-            <form class="login" method="post" action="php/resetPW.php">
-                <h2>New Password</h2><br>
-
-                <label id="question"><b></b></label>    
-                <input type="text" name="email" id="emailReset" class="acctInfo" placeholder="Email Address">    
-                <br><br>    
-
-                <label><b>Password</b></label>    
-                <input type="Password" name="newPassword" class="acctInfo" id="newPassword" placeholder="Password"> 
-                <br><br>
-
-                <label><b>Confirm Password</b></label>    
-                <input type="Password" name="newConfirmPassword" class="acctInfo" id="newConfirmPassword" placeholder="Password"> 
-                <br><br>
-
-                <input type="submit" name="register" id="register" class="submitinfo" value="Update password">
-            </form>     
-        </div>    
+        </div> 
     </div>   
     <br>
 

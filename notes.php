@@ -29,7 +29,10 @@
                     <i class="fa fa-times-circle fa-2x"></i>
                 </a>
             </span>
-            <form class="login" method="post" action="php/addNote.php">
+            <?php
+            echo 
+            "<form class='login' method='post' action='php/addNote.php?email=".$_GET['email']."'>";
+            ?>
                 
                 <h2>Add Note</h2><br>
 
@@ -51,7 +54,6 @@
                 <label><b>Note</b></label>    
                 <textarea type="test" class="formContent" name="notecontent"  id="notecontent" placeholder="Walk the dog"></textarea>
                 <br><br>
-                <input type="hidden" value=1 name="account_id" />
                 <input type="submit" name="notesubmit" id="notesubmit" class="submitinfo" value="Add Note">
             </form>
         </div>
@@ -61,7 +63,10 @@
                     <i class="fa fa-times-circle fa-2x"></i>
                 </a>
             </span>
-            <form class="login" method="post" action="php/editNote.php">
+            <?php
+                echo 
+                "<form class='login' method='post' action='php/editNote.php?email=".$_GET['email']."'>";
+                ?>
                 <h2>Edit Note</h2><br>
 
                 <label><b>Category</b></label> 
@@ -82,7 +87,6 @@
                 <label><b>Note</b></label>    
                 <textarea type="test" name="notecontent" class="formContent" id="editnotecontent" placeholder="Walk the dog"></textarea>
                 <br><br>
-                <input type="hidden" value=1 name="account_id" />
                 <input type="hidden" value=1 name="note_id" id="noteIDEdit" />
                 <input type="submit" name="editNote" id="editNote" class="submitinfo" value="Edit Note">
             </form>
@@ -93,14 +97,16 @@
                     <i class="fa fa-times-circle fa-2x"></i>
                 </a>
             </span>
-            <form class="login" method="post" action="php/deleteNote.php">
+                        <?php
+            echo 
+            "<form class='login' method='post' action='php/deleteNote.php?email=".$_GET['email']."'>";
+            ?>
                 <div id="delMsg">
                 <h2>Delete Note</h2>
                 
                     <h3>Delete note '</h3><h3 id=deleteNoteTitle></h3><h3>'?</h3>
                 </div>
                 
-                <input type="hidden" value=1 name="account_id" />
                 <input type="hidden" value=1 name="note_id" id="noteIDDelete" />
                 <input type="submit" name="deleteNote" id="deleteNote" class="submitinfo" value="Delete">
             </form>
@@ -126,7 +132,6 @@
                 <br>
                 <br>
 
-                <input type="hidden" value=1 name="account_id" />
                 <input type="hidden" value=1 name="note_id" id="noteIDSort" />
                 <input type="submit" name="sortNote" id="sortNote" class="submitinfo" value="Sort">
                 
